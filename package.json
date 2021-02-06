@@ -7,5 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "rehype-stringify": "^6.0.1",
+    "remark-cli": "^8.0.0",
+    "remark-details": "^3.0.0",
+    "remark-math": "1",
+    "remark-parse": "^8.0.0",
+    "remark-rehype": "^5.0.0"
+  },
+  "dependencies": {}
 }

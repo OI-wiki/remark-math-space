@@ -13,13 +13,13 @@ function gap() {
   visitors.inlineMath = inlineMath;
   visitors.link = link;
 
-  function inlineMath(node) {
+  function inlineMath(node, file) {
     return " " + original.apply(this, arguments) + " ";
   }
-  function inlineCode(node) {
+  function inlineCode(node, file) {
     return " " + originalInlineCode.apply(this, arguments) + " ";
   }
-  function strong(node) {
+  function strong(node, file) {
     return " " + originalStrong.apply(this, arguments) + " ";
   }
   function link(node) {
