@@ -16,5 +16,8 @@
     "remark-parse": "^8.0.0",
     "remark-rehype": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "unist-util-visit": "^2.0.3",
+    "vfile-location": "^3.2.0"
+  }
 }
