@@ -1,4 +1,4 @@
-123`code`草$a$ **gg**[](baidu.com)。
+123`code`草$a$ **gg**  [](baidu.com)。
 - `T as U`.
 asd d**s**a `ttt`.
 ttt$a+b$ yyy `ggg`。
