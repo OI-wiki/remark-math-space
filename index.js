@@ -79,13 +79,13 @@ function gap() {
     // console.log(str)
     let offset = 0;
     if (is_cn_en(prevNode[prevNode.length - 1])) {
-      parent.children.splice(index, 0, { type: "text", value: "L" }); // before this node
+      parent.children.splice(index, 0, { type: "text", value: " " }); // before this node
       offset = 1;
     }
     if (is_cn_en(nextNode[0])) {
       parent.children.splice(index + 1 + offset, 0, {
         type: "text",
-        value: "R",
+        value: " ",
       }); // after current node
       offset += 1;
     }
