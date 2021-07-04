@@ -1,6 +1,5 @@
 export default gap;
 
-import vfileLocation from 'vfile-location';
 import { visit } from 'unist-util-visit';
 
 function is_cn_en(char) {
