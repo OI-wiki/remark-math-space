@@ -9,7 +9,8 @@ import space from 'remark-copywriting-correct';
 
 import fs from 'fs';
 
-const www = fs.readFileSync('tests/test.md');
+const in_1 = fs.readFileSync('tests/1.in.md');
+const out_1 = fs.readFileSync('tests/1.out.md');
 
 // const doc = "中文abc中文$a_i$中文";
 
@@ -20,10 +21,8 @@ test('main', (t) => {
     .use(space)
     //.use(de)
     .use(sp)
-    .process(www, function (err, res) {
+    .process(in_1, function (err, res) {
       console.log('finished');
-      console.log(String(res));
-      fs.writeFileSync('tmp', String(res));
+      t.is(String(res), String(out_1));
     });
-  t.pass();
 });
