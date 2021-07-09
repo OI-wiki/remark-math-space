@@ -1,5 +1,3 @@
-export default gap;
-
 import { visit } from 'unist-util-visit';
 
 function is_cn_en(char) {
@@ -14,7 +12,6 @@ function is_cn_en(char) {
 
 function toString(node) {
   return (
-    // (node &&
     node.value ||
     node.alt ||
     node.title ||
@@ -23,7 +20,6 @@ function toString(node) {
     ('length' in node && all(node)) ||
     ''
   );
-  // )
 }
 
 function all(values) {
@@ -39,16 +35,11 @@ function all(values) {
 
 function isSpace(node) {
   const s = toString(node);
-  // console.log(s)
   return s == ' ' || s == '';
-  // return node.type == 'text' && node.value == ' ';
 }
 
 function gap() {
   function visitor(node, index, parent) {
-    // console.log(node);
-    // console.log(node, index, parent);
-    // return
     let prevNode, nextNode;
     const nothing = '';
 
@@ -70,34 +61,27 @@ function gap() {
       nextNode = toString(parent.children[cur]);
     }
 
-    // console.log('(', prevNode, ')')
-    // console.log('(', nextNode, ')')
-    // console.log(prevNode, node, '||', nextNode)
-    // console.log(prevNode[prevNode.length - 1], "||", nextNode[0]);
-    // console.log(prevNode, "||", nextNode);
-    // const str = toString(parent.children[index])
-    // // console.log(parent)
-    // console.log(str)
     let offset = 0;
     if (is_cn_en(prevNode[prevNode.length - 1])) {
-      parent.children.splice(index, 0, { type: 'text', value: ' ' }); // before this node
+      parent.children.splice(index, 0, { type: 'text', value: ' ' }); // insert space before this node
       offset = 1;
     }
     if (is_cn_en(nextNode[0])) {
       parent.children.splice(index + 1 + offset, 0, {
         type: 'text',
         value: ' ',
-      }); // after current node
+      }); // insert space after current node
       offset += 1;
     }
     return [visit.SKIP, index + 1 + offset];
-    // node.value = ' ' + node.value + ' '
   }
 
-  return function (tree, file) {
+  return function (tree) {
     visit(tree, 'inlineCode', visitor);
     visit(tree, 'inlineMath', visitor);
     visit(tree, 'strong', visitor);
     visit(tree, 'link', visitor);
   };
 }
+
+export default gap;
