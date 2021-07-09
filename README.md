@@ -7,3 +7,8 @@ npm install remark-math-space
 ```
 
 used with remark-copywriting-correct.
+
+
+### 发布
+
+运行 `yarn release`，选择合适的版本号，将 tag 推到 GitHub 上，GitHub Actions 会自动在 GitHub Release 和 npm 上发布。
