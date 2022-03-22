@@ -1,39 +1,52 @@
 {
   "name": "remark-math-space",
-  "version": "3.0.0",
-  "description": "",
+  "version": "3.1.0",
+  "description": "Remark plugin for adding spaces a between key block",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "ava",
     "release": "zx scripts/release.mjs"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OI-wiki/remark-math-space.git"
+  },
+  "homepage": "https://github.com/OI-wiki/remark-math-space#readme",
+  "keywords": [
+    "remark",
+    "plugin",
+    "spacing"
+  ],
+  "author": "OI Wiki Team",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OI-wiki/remark-math-space/issues"
+  },
   "devDependencies": {
-    "ava": "^3.15.0",
-    "bumpp": "^6.0.6",
+    "ava": "^4.1.0",
+    "bumpp": "^6.1.0",
     "child_process": "^1.0.2",
-    "eslint": "^7.30.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "fs-extra": "^10.0.0",
-    "prettier": "^2.3.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "fs-extra": "^10.0.1",
+    "prettier": "^2.6.0",
     "rehype-stringify": "^8.0.0",
-    "remark-clang-format": "^1.6.0",
+    "remark": "^14.0.2",
+    "remark-clang-format": "^1.9.3",
     "remark-cli": "^9.0.0",
     "remark-copywriting-correct": "^0.5.0",
-    "remark-details": "^3.0.0",
     "remark-footnotes": "^3.0.0",
-    "remark-lint-final-newline": "^1.0.2",
+    "remark-lint-final-newline": "^1.0.5",
     "remark-lint-no-tabs": "^2.0.1",
     "remark-math": "^4.0.0",
     "remark-parse": "^9.0.0",
     "remark-preset-lint-markdown-style-guide": "^4.0.0",
     "remark-rehype": "^8.1.0",
-    "zx": "^2.0.0"
+    "zx": "^2.1.0"
   },
   "dependencies": {
     "unist-util-visit": "^3.1.0"
-  },
-  "type": "module"
+  }
 }
