@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "ava": "^3.15.0",
+    "ava": "^4.1.0",
     "bumpp": "^6.1.0",
     "child_process": "^1.0.2",
     "eslint": "^7.32.0",
