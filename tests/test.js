@@ -3,7 +3,6 @@ import test from 'ava';
 import { remark } from 'remark';
 import remarkMath from 'remark-math';
 import remarkMathSpace from '../index.js';
-// import remarkDetails from 'remark-details';
 import remarkPresetLintMarkdownStyleGuide from 'remark-preset-lint-markdown-style-guide';
 import remarkCopywritingCorrect from 'remark-copywriting-correct';
 
@@ -17,7 +16,6 @@ for (let i = 1; i <= 2; i++) {
     remark()
       .use(remarkPresetLintMarkdownStyleGuide)
       .use(remarkMath)
-      //.use(remarkDetails)
       .use(remarkCopywritingCorrect)
       .use(remarkMathSpace)
       .process(in_md, function (err, res) {
