@@ -1,8 +1,8 @@
 # remark-math-space
 
-## 使用
-
 用来在行内公式、加粗、斜体、内联代码、超链接两侧加空格（仅在两侧是中英文字符时生效）。
+
+## 使用
 
 ```js
 npm install remark-math-space
