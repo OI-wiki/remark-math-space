@@ -80,6 +80,7 @@ function gap() {
     visit(tree, 'inlineCode', visitor);
     visit(tree, 'inlineMath', visitor);
     visit(tree, 'strong', visitor);
+    visit(tree, 'emphasis', visitor);
     visit(tree, 'link', visitor);
   };
 }

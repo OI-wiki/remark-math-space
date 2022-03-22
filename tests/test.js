@@ -1,9 +1,9 @@
 'use strict';
 import test from 'ava';
-import remark from 'remark';
+import { remark } from 'remark';
 import remarkMath from 'remark-math';
 import remarkMathSpace from '../index.js';
-import remarkDetails from 'remark-details';
+// import remarkDetails from 'remark-details';
 import remarkPresetLintMarkdownStyleGuide from 'remark-preset-lint-markdown-style-guide';
 import remarkCopywritingCorrect from 'remark-copywriting-correct';
 
