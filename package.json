@@ -1,14 +1,28 @@
 {
   "name": "remark-math-space",
   "version": "3.1.0",
-  "description": "",
+  "description": "Remark plugin for adding spaces a between key block",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "ava",
     "release": "zx scripts/release.mjs"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OI-wiki/remark-math-space.git"
+  },
+  "homepage": "https://github.com/OI-wiki/remark-math-space#readme",
+  "keywords": [
+    "remark",
+    "plugin",
+    "spacing"
+  ],
+  "author": "OI Wiki Team",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OI-wiki/remark-math-space/issues"
+  },
   "devDependencies": {
     "ava": "^4.1.0",
     "bumpp": "^6.1.0",
@@ -35,5 +49,4 @@
   "dependencies": {
     "unist-util-visit": "^3.1.0"
   },
-  "type": "module"
 }
